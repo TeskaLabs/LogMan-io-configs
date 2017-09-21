@@ -1,0 +1,115 @@
+{
+	"template": "lm-*",
+	"mappings": {
+
+		"syslog": {
+			"properties": {
+
+				"@timestamp": {
+					"type": "date"
+				},
+
+				"M": { // Message
+					"type": "text",
+					"fields": {
+						"keyword": {
+							"type": "keyword",
+							"ignore_above": 4096
+						}
+					}
+				},
+
+				"H": { // Host
+					"type": "keyword"
+				},
+
+				"P": { // Program
+					"type": "keyword"
+				},
+
+				"f": { // Facility
+					"type": "byte"
+				},
+
+				"l": { // Level
+					"type": "byte"
+				},
+
+				"p": { // PID
+					"type": "long"
+				}
+
+			}
+		},
+
+
+		"aal": { // Apache access log
+			"properties": {
+
+				"@timestamp": {
+					"type": "date"
+				},
+
+				"M": { // Message
+					"type": "text",
+					"fields": {
+						"keyword": {
+							"type": "keyword",
+							"ignore_above": 4096
+						}
+					}
+				},
+
+				"H": { // Host
+					"type": "keyword"
+				},
+
+				"P": { // Program
+					"type": "keyword"
+				},
+
+				"aal.A": { // Agent
+					"type": "text"
+				},
+
+				"aal.a": { // Auth
+					"type": "text"
+				},
+
+				"aal.b": { // Bytes
+					"type": "long"
+				},
+
+				"aal.i": { // Client IP
+					"type": "ip"
+				},
+
+				"aal.v": { // HTTP version
+					"type": "keyword"
+				},
+
+				"aal.I": { // Ident
+					"type": "text"
+				},
+
+				"aal.m": { // Method
+					"type": "keyword"
+				},
+
+				"aal.r": { // Referer
+					"type": "text"
+				},
+
+				"aal.p": { // Request path
+					"type": "text"
+				},
+
+				"aal.c": { // Response code
+					"type": "short"
+				}
+
+			}
+		}
+
+	}
+}
