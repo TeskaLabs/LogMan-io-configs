@@ -37,6 +37,32 @@
 
 				"p": { // PID
 					"type": "long"
+				},
+
+
+				// SeaCat Structured data
+				"SC.a": { // Audit type
+					"type": "keyword"
+				},
+
+				"SC.h": { // Host
+					"type": "ip"
+				},
+
+				"SC.l": { // Log level
+					"type": "keyword"
+				},
+
+				"SC.p": { // PID
+					"type": "long"
+				},
+
+				"t": { // Client tag
+					"type": "keyword"
+				},
+
+				"d": { // Duration
+					"type": "double"
 				}
 
 			}
